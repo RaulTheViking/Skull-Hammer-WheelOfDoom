@@ -1,0 +1,27 @@
+* {
+    font-family: "Doom";
+    background-color: black;
+    background-image: url(/Pictures/Dripping.png);
+    background-repeat: no-repeat
+}
+
+.button-container {
+    text-align: center;
+}
+
+.Ready-Button {
+    font-style: none;
+    font-size: 10vh;
+    background-image: url(/Pictures/Blood\ Image.jpg);
+    margin-top: 34vh;
+    color: white;
+    padding-top: 5vh;
+    padding-left: 8vh;
+    padding-right: 8vh;
+    transition: all .2s ease-in-out; 
+    border-color: red;
+}
+
+.Ready-Button:hover {
+    transform: scale(0.95);
+}
