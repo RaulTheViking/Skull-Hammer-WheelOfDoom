@@ -13,6 +13,7 @@
     font-style: none;
     font-size: 10vh;
     background-image: url(/Pictures/Blood\ Image.jpg);
+    background-size: cover;
     margin-top: 34vh;
     color: white;
     padding-top: 5vh;
@@ -20,6 +21,7 @@
     padding-right: 8vh;
     transition: all .2s ease-in-out; 
     border-color: red;
+    
 }
 
 .Ready-Button:hover {
