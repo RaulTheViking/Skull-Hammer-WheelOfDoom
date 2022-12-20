@@ -10,7 +10,8 @@ div h1 {
     font-size: 600%;
     margin-top: 2vh;
     text-decoration: underline;
-    text-decoration-color: white
+    text-decoration-color: white;
+    letter-spacing: 5px;
 }
 
 *{
@@ -19,8 +20,28 @@ div h1 {
     margin: 0;
     outline: none;
   }
+
+  #table-button {
+    background-color: transparent;
+    font-size: 5vh;
+    font-family: "Doom";
+    letter-spacing: 3px;
+    margin-top: 2.5vh;
+    border-style: none;
+    cursor: pointer;
+  }
+
+  #table-button:hover {
+    color: red;
+  }
+
+  .wheel-title {
+    color: black;
+  }
+
   table{
     background-color: rgb(109, 55, 55);
+    height: 500px;
     margin-left: 20vh;
     font-size: 3.5vh;
     padding: 2vh;
@@ -31,6 +52,10 @@ div h1 {
   input{
     height: 3vh;
     width: 25vh;
+    background-color: rgba(209, 11, 11, 0.205);
+    border-style: solid;
+    border-color: black;
+    font-size: 2vh;
   }
   
   body{
@@ -41,11 +66,14 @@ div h1 {
     background-size: cover;
   }
   
+  .wheel-container {
+    display: flex;
+  }
   .mainbox{
     position: relative;
     width: 500px;
     height: 500px;
-    margin-left: 78.5vh;
+    margin-left: 23vh;
     margin-top: 10vh;
   }
   .mainbox:after{
