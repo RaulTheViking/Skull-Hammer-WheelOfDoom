@@ -20,7 +20,7 @@ let listaDeCoders = []
 
 listaDeCoders.push ()
 
-slice 
+//slice 
 
 
-funciones de los arrays 
+//funciones de los arrays 
