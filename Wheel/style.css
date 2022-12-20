@@ -19,7 +19,19 @@ div h1 {
     margin: 0;
     outline: none;
   }
-  
+  table{
+    background-color: rgb(109, 55, 55);
+    margin-left: 20vh;
+    font-size: 3.5vh;
+    padding: 2vh;
+    color: white;
+    letter-spacing: 4px;
+    font-family: "Doom";
+  }
+  input{
+    height: 3vh;
+    width: 25vh;
+  }
   
   body{
     justify-content: center;
