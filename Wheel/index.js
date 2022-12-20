@@ -18,7 +18,8 @@ function myfunction(){
 
 let listaDeCoders = []
 
-listaDeCoders.push ()
+
+listaDeCoders.push ();
 
 slice 
 
