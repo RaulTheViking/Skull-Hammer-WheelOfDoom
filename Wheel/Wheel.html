@@ -14,10 +14,12 @@
     </style>
 </head>
 <body>
-    <script src="Functions.js"></script>
+    <script src="Java Script\Functions.js"></script>
     <div>
         <h1>THE WHEEL OF DOOM</h1>
     </div>
+
+
     <div class="wheel-container">
         <table>
             <tr>
@@ -25,46 +27,54 @@
                 
             </tr>
             <tr>
-                <th><input type="text"></th>
+                <th><input type="text" id="input-1"> 
+                    <button onclick="updateText()">ok</button></th>
                 
             </tr>
             <tr>
-                <th><input type="text"></th>
+                <th><input type="text" id="input-2">
+                    <button onclick="updateText()">ok</button></th>
                 
             </tr>
             <tr>
-                <th><input type="text"></th>
+                <th><input type="text" id="input-3">
+                    <button onclick="updateText()">ok</button></th>
                 
             </tr>
             <tr>
-                <th><input type="text"></th>
+                <th><input type="text" id="input-4">
+                    <button onclick="updateText()">ok</button></th>
                 
             </tr>
             <tr>
-                <th><input type="text"></th>
+                <th><input type="text" id="input-5">
+                    <button onclick="updateText()">ok</button></th>
                 
             </tr>
             <tr>
-                <th><input type="text"></th>
+                <th><input type="text" id="input-6">
+                    <button onclick="updateText()">ok</button></th>
                 
             </tr>
             <tr>
                 <th><button id="table-button">Enviar</button></th>
+                
             </tr>
         </table>
         <div id="mainbox" class="mainbox">
+            
             <div id="box" class="box">
                 <div class="box1">
-                    <span class="span1"><b>Diego</b></span>
-                    <span class="span2"><b>Celia</b></span>
-                    <span class="span3"><b>Nacho</b></span>
-                    <span class="span4"><b>Raul</b></span>
+                    <span class="span1" ><b id="coder-1"></b></span>
+                    <span class="span2" id="coder-2"><b></b></span>
+                    <span class="span3" id="coder-3"><b></b></span>
+                    <span class="span4" id="coder-4"><b>Raul</b></span>
                 </div>
                 <div class="box2">
-                    <span class="span1"><b>Javi</b></span>
-                    <span class="span2"><b>Lucia</b></span>
-                    <span class="span3"><b>Elena</b></span>
-                    <span class="span4"><b>Eva</b></span>
+                    <span class="span1" id="coder-5"><b>Javi</b></span>
+                    <span class="span2" id="coder-6"><b>Lucia</b></span>
+                    <span class="span3" id="coder-7"><b>Elena</b></span>
+                    <span class="span4" id="coder-8"><b>Eva</b></span>
                 </div>
             </div>
             <button class="spin" onclick="myfunction()">DOOM</button>
