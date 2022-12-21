@@ -23,10 +23,10 @@ div h1 {
 
   #table-button {
     background-color: transparent;
-    font-size: 5vh;
+    font-size: 3vh;
     font-family: "Doom";
     letter-spacing: 3px;
-    margin-top: 2.5vh;
+    margin-top: 2vh;
     border-style: none;
     cursor: pointer;
   }
