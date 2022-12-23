@@ -35,8 +35,9 @@ div h1 {
     color: red;
   }
 
-  .wheel-title {
-    color: black;
+  .wheel-title{
+    color: white;
+    margin-top: 2vh;
   }
 
   table{
@@ -104,31 +105,39 @@ div h1 {
   }
   .span1{
     clip-path: polygon(0 92%, 100% 50%, 0 8%);
-    color: black;
-    background-color: red;
+    color: white;
     top: 120px;
     left: 0;
+    background-image: url(/Pictures/hell1.jpg);
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   .span2{
     clip-path: polygon(100% 92%, 0 50%, 100% 8%);
-    background-color: black;
+    background-image: url(/Pictures/hell2.webp);
+    background-size: cover;
     color: white;
     top: 120px;
     right: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   .span3{
     clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
-    background-color: red;
+    background-image: url(/Pictures/hell3.webp);
+    background-size: cover;
     color: white;
     bottom: 0;
     left: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   .span4{
     clip-path: polygon(50% 100%, 92% 0, 8% 0);
-    background-color: black;
-    color: red;
+    background-image: url(/Pictures/hell4.jpg);
+    background-size: cover;
+    color: white;
     top: 0;
     left: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
   

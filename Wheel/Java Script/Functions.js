@@ -15,13 +15,16 @@ function myfunction(){
 	}, 5000);
 }
 
+
+// Divir la ruleta en funcion de los coders que hay dentro del array. 
+// Incluir los coders mediante un push
+
+let listaDeCoders = []
+
 function updateText() {
-    // Obtén el valor del input
     var inputText = document.getElementById("input-1").value;
-
-    // Establece el valor del input como el contenido del elemento text-container
     document.getElementById("coder-1").innerHTML = inputText;
-
+    listaDeCoders.push 
 }
 
 function updateText2(){
@@ -57,3 +60,19 @@ function updateText8(){
     document.getElementById("coder-8").innerHTML =inputText;
 }
  
+
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+    audio.volume = 0.2;
+  }
+
+  var input = document.getElementsByName('array[]');
+  document.getElementById("coder-1").innerHTML
+  
+
+  function play() {
+    var audio = document.getElementById("bgaudio");
+    audio.play();
+    audio.volume = 0.1;
+  }

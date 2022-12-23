@@ -12,11 +12,13 @@
         src:url("/Fonts/AmazDooMLeft.ttf");
     }
     </style>
+    <audio src="/Music/doom.mp3"></audio>
 </head>
 <body>
     <script src="Java Script\Functions.js"></script>
     <div>
-        <h1>THE WHEEL OF DOOM</h1>
+        <h1 onclick="play()">THE WHEEL OF DOOM</h1>
+        <audio id= "bgaudio" src="/Music/doom.mp3"></audio>
     </div>
 
 
@@ -28,8 +30,8 @@
             </tr>
             <tr>
                 <th><input type="text" id="input-1"> 
-                    <button id="table-button" onclick="updateText()">✔</button></th>
-                
+                    <button id="table-button" onpointerover="play()" onclick="updateText()">✔</button></th>
+                    <audio id="audio" src="/Music/sacar-cuchillo.mp3"></audio>
             </tr>
             <tr>
                 <th><input type="text" id="input-2">
@@ -66,22 +68,21 @@
                     <button id="table-button" onclick="updateText8()">✔</button></th>
                 
             </tr>
-           
         </table>
         <div id="mainbox" class="mainbox">
             
             <div id="box" class="box">
                 <div class="box1">
-                    <span class="span1" ><b id="coder-1"></b></span>
-                    <span class="span2" ><b id="coder-2"></b></span>
-                    <span class="span3" ><b id="coder-3"></b></span>
-                    <span class="span4" ><b id="coder-4"></b></span>
+                    <span class="span1"><b id="coder-1"></b></span>
+                    <span class="span2"><b id="coder-2"></b></span>
+                    <span class="span3"><b id="coder-3"></b></span>
+                    <span class="span4"><b id="coder-4"></b></span>
                 </div>
                 <div class="box2">
-                    <span class="span1" ><b id="coder-5"></b></span>
-                    <span class="span2" ><b id="coder-6"></b></span>
+                    <span class="span1"><b id="coder-5"></b></span>
+                    <span class="span2"><b id="coder-6"></b></span>
                     <span class="span3"><b id="coder-7"></b></span>
-                    <span class="span4" ><b id="coder-8"></b></span>
+                    <span class="span4"><b id="coder-8"></b></span>
                 </div>
             </div>
             <button class="spin" onclick="myfunction()">DOOM</button>
