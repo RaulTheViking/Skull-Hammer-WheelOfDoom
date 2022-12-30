@@ -1,78 +1,68 @@
-function myfunction(){
+function myfunction() {
 
 
-	var x = 1024;
-	var y = 9999; 
+    var x = 1024;
+    var y = 9999;
 
-	var deg = Math.floor(Math.random() * (x - y)) + y;
+    var deg = Math.floor(Math.random() * (x - y)) + y;
 
-	document.getElementById('box').style.transform = "rotate("+deg+"deg)";
+    document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
 
-	var element = document.getElementById('mainbox');
-	element.classList.remove('animate');
-	setTimeout(function(){
-		element.classList.add('animate');
-	}, 5000);
+    var element = document.getElementById('mainbox');
+    element.classList.remove('animate');
+    setTimeout(function () {
+        element.classList.add('animate');
+    }, 5000);
 }
 
 
-// Divir la ruleta en funcion de los coders que hay dentro del array. 
-// Incluir los coders mediante un push
+var listaCoders = [];
 
-let listaDeCoders = []
+let show = listaCoders[Math.floor(Math.random() * listaCoders.length)];
+// console.info(show)
 
-function updateText() {
-    var inputText = document.getElementById("input-1").value;
-    document.getElementById("coder-1").innerHTML = inputText;
-    listaDeCoders.push 
+let coder = document.getElementById('coder')
+let anadir = document.getElementById('anadir')
+let listar = document.getElementById('listado')
+let wheel = document.getElementById("coder-1")
+let expandable = document.getElementById("box")
+
+function agregarCoder() {
+    anadir.addEventListener("click", () => {
+        listaCoders.push(coder.value)
+        console.log(listaCoders)
+        listar.innerHTML += `<p>${coder.value}</p>`
+        wheel.innerHTML += `<p>${coder.value}</p>`
+    })
 }
 
-function updateText2(){
-    var inputText = document.getElementById("input-2").value;
-    document.getElementById("coder-2").innerHTML =inputText;
-}
- 
-function updateText3(){
-    var inputText = document.getElementById("input-3").value;
-    document.getElementById("coder-3").innerHTML =inputText;
-}
-function updateText4(){
-    var inputText = document.getElementById("input-4").value;
-    document.getElementById("coder-4").innerHTML =inputText;
-}
-function updateText5(){
-    var inputText = document.getElementById("input-5").value;
-    document.getElementById("coder-5").innerHTML =inputText;
-}
- 
-function updateText6(){
-    var inputText = document.getElementById("input-6").value;
-    document.getElementById("coder-6").innerHTML =inputText;
-}
- 
-function updateText7(){
-    var inputText = document.getElementById("input-7").value;
-    document.getElementById("coder-7").innerHTML =inputText;
-}
- 
-function updateText8(){
-    var inputText = document.getElementById("input-8").value;
-    document.getElementById("coder-8").innerHTML =inputText;
-}
- 
+agregarCoder()
+
+
+
+
+
+
+document.getElementById('kill-button').addEventListener("click", e => {
+    if (!listaCoders.length) return;
+    const coderKilled = Math.floor(Math.random() * listaCoders.length);
+    let killed = listaCoders[coderKilled];
+    listaCoders.splice(coderKilled, 1);
+    loosers.innerHTML += `<p>${killed}</p>`
+});
+
+
+
 
 function play() {
-    var audio = document.getElementById("audio");
+    var audio = document.getElementById("anadir");
     audio.play();
     audio.volume = 0.2;
-  }
+}
 
-  var input = document.getElementsByName('array[]');
-  document.getElementById("coder-1").innerHTML
-  
-
-  function play() {
+function play() {
     var audio = document.getElementById("bgaudio");
     audio.play();
     audio.volume = 0.1;
-  }
+}
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,88 +9,39 @@
     <link rel="stylesheet" href="Wheel.css">
     <style>
         @font-face {
-        font-family: "Doom";
-        src:url("/Fonts/AmazDooMLeft.ttf");
-    }
+            font-family: "Doom";
+            src: url("/Fonts/AmazDooMLeft.ttf");
+        }
     </style>
     <audio src="/Music/doom.mp3"></audio>
 </head>
+
 <body>
-    <script src="Java Script\Functions.js"></script>
     <div>
-        <h1 onclick="play()">THE WHEEL OF DOOM</h1>
-        <audio id= "bgaudio" src="/Music/doom.mp3"></audio>
+        <h1 class="main-title" onclick="play()">THE WHEEL OF DOOM</h1>
+        <audio id="bgaudio" src="/Music/doom.mp3"></audio>
     </div>
-
-
     <div class="wheel-container">
-        <table>
-            <tr>
-                <th class="wheel-title">Introduce los nombres</th>
-                
-            </tr>
-            <tr>
-                <th><input type="text" id="input-1"> 
-                    <button id="table-button" onpointerover="play()" onclick="updateText()">✔</button></th>
-                    <audio id="audio" src="/Music/sacar-cuchillo.mp3"></audio>
-            </tr>
-            <tr>
-                <th><input type="text" id="input-2">
-                    <button id="table-button" onclick="updateText2()">✔</button></th>
-                
-            </tr>
-            <tr>
-                <th><input type="text" id="input-3">
-                    <button id="table-button" onclick="updateText3()">✔</button></th>
-                
-            </tr>
-            <tr>
-                <th><input type="text" id="input-4">
-                    <button id="table-button" onclick="updateText4()">✔</button></th>
-                
-            </tr>
-            <tr>
-                <th><input type="text" id="input-5">
-                    <button id="table-button" onclick="updateText5()">✔</button></th>
-                
-            </tr>
-            <tr>
-                <th><input type="text" id="input-6">
-                    <button id="table-button" onclick="updateText6()">✔</button></th>
-                
-            </tr>
-            <tr>
-                <th><input type="text" id="input-7">
-                    <button id="table-button" onclick="updateText7()">✔</button></th>
-                
-            </tr>
-            <tr>
-                <th><input type="text" id="input-8">
-                    <button id="table-button" onclick="updateText8()">✔</button></th>
-                
-            </tr>
-        </table>
-        <div id="mainbox" class="mainbox">
-            
-            <div id="box" class="box">
-                <div class="box1">
-                    <span class="span1"><b id="coder-1"></b></span>
-                    <span class="span2"><b id="coder-2"></b></span>
-                    <span class="span3"><b id="coder-3"></b></span>
-                    <span class="span4"><b id="coder-4"></b></span>
+        <div class="button-container">
+            <h1 class="wheel-title">Introduce los nombres</h1>
+            <input type="text" name="coder" id="coder">
+            <button type="button" id="anadir" onpointerover="play()">Enviar</button>
+            <audio id="audio" src="/Music/sacar-cuchillo.mp3"></audio>
+
+            <div class="container-of-containers">
+                <div class="coders-container">
+                    <h2 class="coders-title">List of Coders</h2>
+                    <div id="listado"></div>
                 </div>
-                <div class="box2">
-                    <span class="span1"><b id="coder-5"></b></span>
-                    <span class="span2"><b id="coder-6"></b></span>
-                    <span class="span3"><b id="coder-7"></b></span>
-                    <span class="span4"><b id="coder-8"></b></span>
+                <div class="dead-coders-container">
+                    <h2 class="coders-title">List of Murder</h2>
+                    <div id="loosers"></div>
                 </div>
+            <button type="button" id="kill-button">KILL</button>
             </div>
-            <button class="spin" onclick="myfunction()">DOOM</button>
         </div>
-
-		
-	</div>
-
+    </div>
+    <script src="Java Script\Functions.js"></script>
 </body>
+
 </html>
