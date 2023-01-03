@@ -1,65 +1,65 @@
-function myfunction() {
-
-
-    var x = 1024;
-    var y = 9999;
-
-    var deg = Math.floor(Math.random() * (x - y)) + y;
-
-    document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
-
-    var element = document.getElementById('mainbox');
-    element.classList.remove('animate');
-    setTimeout(function () {
-        element.classList.add('animate');
-    }, 5000);
-}
-
-
-var listaCoders = [];
-
-let show = listaCoders[Math.floor(Math.random() * listaCoders.length)];
-// console.info(show)
+var codersList = [];
 
 let coder = document.getElementById('coder')
-let anadir = document.getElementById('anadir')
-let listar = document.getElementById('listado')
-let wheel = document.getElementById("coder-1")
-let expandable = document.getElementById("box")
+let add = document.getElementById('add')
+let listing = document.getElementById('listado')
 
-function agregarCoder() {
-    anadir.addEventListener("click", () => {
-        listaCoders.push(coder.value)
-        console.log(listaCoders)
-        listar.innerHTML += `<p>${coder.value}</p>`
-        wheel.innerHTML += `<p>${coder.value}</p>`
+function addCoder() {
+    add.addEventListener("click", () => {
+        codersList.push(coder.value)
+        console.log(codersList)
+        listing.innerHTML += `<p>${coder.value}</p>`
     })
 }
 
-agregarCoder()
+addCoder()
 
 
+// function printCoders(array) {
+//     let codersPrinted = "";
+
+//     array.forEach(item =>{
+//       codersPrinted += `<p>${item}</p>` 
+//     });
 
 
+//     listar.innerHTML = codersPrinted;
+//   };
 
+//   printCoders(array);
 
 document.getElementById('kill-button').addEventListener("click", e => {
-    if (!listaCoders.length) return;
-    const coderKilled = Math.floor(Math.random() * listaCoders.length);
-    let killed = listaCoders[coderKilled];
-    listaCoders.splice(coderKilled, 1);
-    loosers.innerHTML += `<p>${killed}</p>`
+    if (!codersList.length) return;
+    const coderKilled = Math.floor(Math.random() * codersList.length);
+    let killed = codersList[coderKilled];
+    codersList.splice(coderKilled, 1);
+    loosers.innerHTML += `<p>${killed}</p>`;
+    murdered.innerHTML += `<p>${killed} has been murdered </p>`;
 });
 
 
+var modal = document.getElementById("pop-Up");
+var btn = document.getElementById("kill-button");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+span.onclick = function () {
+    modal.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 function play() {
-    var audio = document.getElementById("anadir");
+    var audio = document.getElementById("add");
     audio.play();
     audio.volume = 0.2;
 }
-
 function play() {
     var audio = document.getElementById("bgaudio");
     audio.play();

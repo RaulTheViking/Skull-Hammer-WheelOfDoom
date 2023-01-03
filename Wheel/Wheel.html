@@ -23,21 +23,35 @@
     </div>
     <div class="wheel-container">
         <div class="button-container">
-            <h1 class="wheel-title">Introduce los nombres</h1>
-            <input type="text" name="coder" id="coder">
-            <button type="button" id="anadir" onpointerover="play()">Enviar</button>
+            <h1 class="wheel-title">Introduce the names</h1>
+            <div class="input-buttons">
+                <div>
+                    <input type="text" name="coder" id="coder">
+                </div>
+                <div class="buttons">
+                    <button type="button" id="add" onpointerover="play()">Send</button>
+                    <button type="button" onclick="javascript:moveItem()" id="kill-button">KILL</button>
+                </div>
+            </div>
             <audio id="audio" src="/Music/sacar-cuchillo.mp3"></audio>
 
             <div class="container-of-containers">
                 <div class="coders-container">
                     <h2 class="coders-title">List of Coders</h2>
-                    <div id="listado"></div>
+                    <div id="pop-Up" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <h2 id="murdered"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="listado"></ul>
                 </div>
                 <div class="dead-coders-container">
                     <h2 class="coders-title">List of Murder</h2>
-                    <div id="loosers"></div>
+                    <ul id="loosers"></ul>
                 </div>
-            <button type="button" id="kill-button">KILL</button>
             </div>
         </div>
     </div>
