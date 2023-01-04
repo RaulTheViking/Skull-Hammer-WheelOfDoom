@@ -17,17 +17,33 @@ addCoder()
 
 document.getElementById('kill-button').addEventListener("click", e => {
     if (!codersList.length) return;
+  
     const coderKilled = Math.floor(Math.random() * codersList.length);
-    let killed = codersList[coderKilled];
-    codersList.splice(coderKilled, 1);
-    document.getElementById("listado").innerHTML = "";
-    codersList.forEach(item => {
-        listing.innerHTML += `<p>${item}</p>`
+    const killed = codersList[coderKilled];
+    codersList = codersList.filter((_, i) => i !== coderKilled);
+  
+    updateListado(codersList);
+    updateLoosers(killed);
+    updateMurdered(killed);
+  });
+  
+  function updateListado (items) {
+    const listing = document.getElementById("listado");
+    listing.innerHTML = "";
+    items.forEach(item => {
+      listing.innerHTML += `<p>${item}</p>`;
     });
-    loosers.innerHTML += `<p>${killed}</p>`;
-    murdered.innerHTML += `<p>${killed} has been murdered </p>`;
-
-});
+  };
+  
+  function updateLoosers (item) {
+    const loosers = document.getElementById("loosers");
+    loosers.innerHTML += `<p>${item}</p>`;
+  };
+  
+  function updateMurdered (item) {
+    const murdered = document.getElementById("murdered");
+    murdered.innerHTML += `<p>${item} has been murdered </p>`;
+  };
 
 
 var modal = document.getElementById("pop-Up");
@@ -47,9 +63,8 @@ window.onclick = function (event) {
 }
 
 
-
 function play() {
-    var audio = document.getElementById("add");
+    var audio = document.getElementById("audiox");
     audio.play();
     audio.volume = 0.2;
 }
