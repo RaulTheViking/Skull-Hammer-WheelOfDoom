@@ -7,34 +7,26 @@ let listing = document.getElementById('listado')
 function addCoder() {
     add.addEventListener("click", () => {
         codersList.push(coder.value)
-        console.log(codersList)
         listing.innerHTML += `<p>${coder.value}</p>`
+        document.getElementById ("coder").value = "";
     })
 }
 
 addCoder()
 
 
-// function printCoders(array) {
-//     let codersPrinted = "";
-
-//     array.forEach(item =>{
-//       codersPrinted += `<p>${item}</p>` 
-//     });
-
-
-//     listar.innerHTML = codersPrinted;
-//   };
-
-//   printCoders(array);
-
 document.getElementById('kill-button').addEventListener("click", e => {
     if (!codersList.length) return;
     const coderKilled = Math.floor(Math.random() * codersList.length);
     let killed = codersList[coderKilled];
     codersList.splice(coderKilled, 1);
+    document.getElementById("listado").innerHTML = "";
+    codersList.forEach(item => {
+        listing.innerHTML += `<p>${item}</p>`
+    });
     loosers.innerHTML += `<p>${killed}</p>`;
     murdered.innerHTML += `<p>${killed} has been murdered </p>`;
+
 });
 
 
@@ -55,11 +47,13 @@ window.onclick = function (event) {
 }
 
 
+
 function play() {
     var audio = document.getElementById("add");
     audio.play();
     audio.volume = 0.2;
 }
+
 function play() {
     var audio = document.getElementById("bgaudio");
     audio.play();
